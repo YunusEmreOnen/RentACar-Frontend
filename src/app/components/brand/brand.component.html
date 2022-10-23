@@ -1,1 +1,6 @@
-<p>brand works!</p>
+<br>
+<div class="list-group">
+  <a *ngFor="let brand of brands" href="#" class="list-group-item list-group-item-action" aria-current="true" >
+    {{brand.id}} {{brand.brandName}}
+  </a>
+</div>
