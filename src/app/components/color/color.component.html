@@ -1,5 +1,12 @@
 <div class="list-group">
-  <a *ngFor="let color of colors" href="#" class="list-group-item list-group-item-action" aria-current="true" >
-    {{color.id}} {{color.colorName}}
+  <a
+    (click)="setCurrentColor(color)"
+    routerLink="/cars/color/{{ color.id }}"
+    *ngFor="let color of colors"
+    href="#"
+    [class]="getCurrentColorClass(color)"
+    aria-current="true"
+  >
+   {{ color.colorName }}
   </a>
 </div>
